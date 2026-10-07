@@ -1,44 +1,65 @@
-# Chest X-Ray Pneumonia Detection
+# 🩺 Chest X-Ray Pneumonia Detection
 
-A deep learning project that classifies chest X-ray images into two categories:
+## 📌 Project Overview
+
+This project is a deep learning-based application that detects pneumonia from chest X-ray images.
+
+The project uses a pre-trained ResNet18 convolutional neural network (CNN) model and transfer learning to classify chest X-ray images into two categories:
 
 - NORMAL
 - PNEUMONIA
 
-The project uses a ResNet18-based deep learning model and provides a Streamlit web application for image classification.
+The trained model is integrated with a Streamlit web application where users can upload a chest X-ray image and receive a prediction along with the model confidence score.
 
-## Technologies Used
+---
+
+## 🎯 Project Objectives
+
+- Detect pneumonia from chest X-ray images.
+- Build and train a deep learning image classification model.
+- Use ResNet18 for image classification.
+- Save the trained PyTorch model.
+- Build a user-friendly Streamlit web application.
+- Allow users to upload X-ray images and receive predictions.
+- Display the prediction and confidence score.
+
+---
+
+## 🛠️ Technologies Used
+
+### Programming Language
 
 - Python
+
+### Deep Learning
+
 - PyTorch
-- Torchvision
-- Streamlit
-- PIL
+- TorchVision
 - ResNet18
-- Deep Learning
-- Computer Vision
+- Convolutional Neural Networks (CNN)
 
-## Project Workflow
+### Image Processing
 
-1. Chest X-ray images are used for model training.
-2. A ResNet18 model is trained for binary classification.
-3. The trained model is saved as `pneumonia_model.pth`.
-4. A Streamlit application loads the trained model.
-5. Users can upload a chest X-ray image.
-6. The application predicts whether the image is NORMAL or PNEUMONIA.
+- Pillow (PIL)
 
-## Project Structure
+### Web Application
+
+- Streamlit
+
+### Development Tools
+
+- Visual Studio Code
+- Git
+- GitHub
+
+---
+
+## 🧠 Model Architecture
+
+The project uses **ResNet18**, a convolutional neural network architecture available through TorchVision.
+
+The final fully connected layer of ResNet18 is modified to classify the images into two classes:
 
 ```text
-chest-xray-pneumonia-detection/
-│
-├── app.py
-├── train.py
-├── pneumonia_model.pth
-├── output1.png
-├── output2.png
-├── output3.png
-├── output4.png
-├── Chest X-Ray.pdf
-├── README.md
-├── requirements.txt
+NORMAL
+PNEUMONIA
